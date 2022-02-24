@@ -15,9 +15,11 @@ defmodule TxDashboard.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: TxDashboard.PubSub},
       # Start the Endpoint (http/https)
-      TxDashboardWeb.Endpoint
+      TxDashboardWeb.Endpoint,
       # Start a worker by calling: TxDashboard.Worker.start_link(arg)
       # {TxDashboard.Worker, arg}
+      # Start rabbit consumer
+      TxDashboard.Consumer
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
